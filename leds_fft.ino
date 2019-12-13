@@ -466,12 +466,9 @@ void loop(){
         loop5(leds);
       } else if (pattern==2) {
         random_burst();
-      } 
-      /*else if (pattern==3) {
-        rainbow_fade();
-      }
-      */ 
-      else {
+      } else if (pattern==3) {
+        random_burst_white();
+      } else {
         // Reset to the first pattern
         pattern = 0;
       }
