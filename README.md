@@ -38,6 +38,6 @@ Here's the built-up circuit on an [Adafruit screw shield](https://www.adafruit.c
 
 ![circuit](./media/mod_circuit.jpg)
 
-And a final shot showing the conditioned output of a 1 kHz sine wave at about +2.5 V mean.
+A final shot showing the conditioned output of a 1 kHz sine wave at about +2.5 V mean.
 
 ![circuit](./media/mod_scope.jpg)
