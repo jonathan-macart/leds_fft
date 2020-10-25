@@ -30,11 +30,11 @@ This provides a ready-to-use Arduino program for audio visualization via the fas
 
 Your line-level audio signal most likely has a mean of 0 V; we need to shift this to the center of your ADC's range (e.g., 2.5 V for 5-volt devices). Unless you're using a 1.6-volt microcontroller, we also likely need to apply some gain. My input (line-level) audio signal is about 0.6 V peak-to-peak.
 
-The following circuit applies a gain of 6x and shifts the signal to approximately 2.5 V mean. The line-level audio signal goes to `Vin`. `Vout` goes to your ADC; I use pin A0. 
+The following circuit applies a gain of 6x and shifts the signal to approximately 2.5 V mean. The line-level audio signal goes to `Vin`. `Vout` goes to your ADC.
 
 ![circuit](./media/circuit.png)
 
-Here's the built-up circuit on an [Adafruit screw shield](https://www.adafruit.com/product/196). I use a Texas Instruments TLE2021 Excalibur Op-Amp, but others will likely work too. The blue wire is `Vin` in the diagram above. Green provides the conditioned signal to A0. Yellow (digital pin 10) sends the digital signal to the addressable LEDs.
+Here's the built-up circuit on an [Adafruit screw shield](https://www.adafruit.com/product/196). I use a Texas Instruments TLE2021 Excalibur Op-Amp, but others will likely work too. The blue wire is `Vin` in the diagram above. Green provides the conditioned signal (`Vout`) to A0. Yellow (digital pin 10) sends the digital signal to the addressable LEDs.
 
 ![circuit](./media/mod_circuit.jpg)
 
