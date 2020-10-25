@@ -28,5 +28,5 @@ This provides a ready-to-use Arduino program for audio visualization via the fas
 
 ## Signal conditioning
 
-[circuit](media/mod_circuit.jpg)
+![circuit](./media/mod_circuit.jpg){:class="img-responsive"}
 
