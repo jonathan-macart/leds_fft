@@ -348,7 +348,7 @@ void treeWhiteTwinkle( CRGB* L )
     theta += 3700;
  
     //hue16 += 2000;
-    uint8_t hue = 60; //set to yellow! //hue16 / 256;
+    uint8_t hue = 60; //set to yellow! //hue16 / 256; // 43 might be more "yellow"
     L[i] = sv_ramp_white( hue, frac + boost);
   }
 }
@@ -512,6 +512,6 @@ void loadSettings() {
 }
 
 void advancePattern() {
-  pattern = pattern+1 > 2 ? 0 : pattern+1;
+  pattern = pattern+1 > 3 ? 0 : pattern+1;
   EEPROM.write(0, pattern);
 }
