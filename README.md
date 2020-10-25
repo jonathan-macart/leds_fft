@@ -32,7 +32,7 @@ Your audio signal most likely has a mean of 0 V; we need to shift this to the ce
 
 The following circuit applies a gain of 6x and shifts the signal to approximately 2.5 V mean. I use a Texas Instruments TLE2021 Excalibur Op-Amp, but others will likely work too.
 
-![circuit](./media/circuit.pdf)
+![circuit](./media/circuit.png)
 
 Here's the built-up circuit:
 
