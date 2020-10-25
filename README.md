@@ -7,7 +7,7 @@ Dependencies:
 - [FastLED](https://github.com/FastLED/FastLED)
 - [fix_fft](https://www.arduino.cc/reference/en/libraries/fix_fft/)
 
-Tested using an Arduino Uno and WS2811 LEDs, but other combinations are possible. In-use examples:
+Tested using an Arduino Uno and individually addressable WS2811 LEDs, but other combinations are likely possible. In-use examples:
 
 - https://www.youtube.com/watch?v=B0CPVkpbbqc
 - https://www.youtube.com/watch?v=mZiZcwaqly0
@@ -15,7 +15,7 @@ Tested using an Arduino Uno and WS2811 LEDs, but other combinations are possible
 
 ## Summary
 
-This provides a ready-to-use Arduino program for audio visualization via the fast Fourier transform (FFT). Key features are:
+This provides a ready-to-use Arduino program for audio visualization via the fast Fourier transform (FFT). The signal is sent to individually addressable LEDs. Key features are:
 
 - The program reads pin A0 for an audio signal, which it expects to be conditioned to 2.5 V mean with +/- 2.5 V peak-to-peak (assuming you use a 5 V microcontroller). I describe my signal-conditioning circuit below.
 
@@ -34,10 +34,10 @@ The following circuit applies a gain of 6x and shifts the signal to approximatel
 
 ![circuit](./media/circuit.png)
 
-Here's the built-up circuit. I use a Texas Instruments TLE2021 Excalibur Op-Amp, but others will likely work too. Pin 10 sends the WS2811 signal to the LEDs.
+Here's the built-up circuit on an [Adafruit screw shield](https://www.adafruit.com/product/196). I use a Texas Instruments TLE2021 Excalibur Op-Amp, but others will likely work too. The blue wire is `Vin` in the diagram above. Green provides the conditioned signal to A0. Yellow (digital pin 10) sends the digital signal to the addressable LEDs.
 
 ![circuit](./media/mod_circuit.jpg)
 
-And a final shot showing the conditioned output of a 1 kHz sine wave:
+And a final shot showing the conditioned output of a 1 kHz sine wave at about +2.5 V mean.
 
 ![circuit](./media/mod_scope.jpg)
